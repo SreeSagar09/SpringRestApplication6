@@ -1,0 +1,14 @@
+A Program to demonstrate the use of @RequestMapping annotation attributes consumes, produces:
+Programs:
+* AppConfig.java
+* AppInit.java
+* ApplicationController1.java
+* ApplicationController2.java
+Notes:
+* @RequestMapping annotation accept eight attributes those are name, value, path, method, params, headers, consumes, produces
+* The purpose of the consumes and produces attributes are to narrowing the primary mapping by media type and the method consumes and produces the defined media type.
+* The consumes and produces attributes are supported at class level and method level also, if we defined at class level that attributes are inherits to the method levels also.
+* If this attributes are defined both class and method level, then method level defined attributes override the class level defined attributes.
+* If this attributes are not defined then that handler method can supported to produces and consumes the all types of media types.
+* If the handler method consumes json media types but access that method with different media type then it gives '415 – Unsupported Media Type'.
+* If the handler method produces json media types but access that method with different media type then it gives '406 – Not Acceptable'
